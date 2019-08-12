@@ -1,5 +1,5 @@
 #!/bin/bash
 
-docker-compose -f docker-compose.yml down
+docker-compose -f docker-config/docker-compose.yaml down
 
-docker-compose -f docker-compose.yml up -d
+docker-compose -f docker-config/docker-compose.yaml up -d
