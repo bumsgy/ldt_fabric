@@ -6,7 +6,6 @@ export FABRIC_CFG_PATH=$PWD
 echo 'delete old file'
 rm -rf ./channel-artifacts
 
-
 echo 'mkdir'
 mkdir ./channel-artifacts
 
@@ -18,9 +17,9 @@ configtxgen -profile OneOrgOrdererGenesis -outputBlock ./channel-artifacts/genes
 configtxgen -profile OneOrgChannel -outputCreateChannelTx ./channel-artifacts/channel.tx -channelID mychannel
 
 # configtxgen -profile OneOrgAnotherChannel -outputCreateChannelTx ./channel-artifacts/channel2.tx -channelID mychannel2
-#configtxgen -profile OneOrgAnotherChannelB -outputCreateChannelTx ./channel-artifacts/channel3.tx -channelID mychannel3
+# configtxgen -profile OneOrgAnotherChannelB -outputCreateChannelTx ./channel-artifacts/channel3.tx -channelID mychannel3
 
 #two anchor peer transactions - one for each Peer Org.
 #./bin/configtxgen -profile OneOrgChannel -outputAnchorPeersUpdate ./channel-artifacts/Org1MSPanchors.tx -channelID mychannel -asOrg Org1MSP
-configtxgen -profile OneOrgChannel -outputAnchorPeersUpdate ./channel-artifacts/Org1MSPanchors.tx -channelID mychannel -asOrg Org1MSP
-configtxgen -profile OneOrgChannel -outputAnchorPeersUpdate ./channel-artifacts/Org2MSPanchors.tx -channelID mychannel -asOrg Org2MSP
+# configtxgen -profile OneOrgChannel -outputAnchorPeersUpdate ./channel-artifacts/Org1MSPanchors.tx -channelID mychannel -asOrg Org1MSP
+# configtxgen -profile OneOrgChannel -outputAnchorPeersUpdate ./channel-artifacts/Org2MSPanchors.tx -channelID mychannel -asOrg Org2MSP

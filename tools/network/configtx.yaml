@@ -9,16 +9,16 @@ Organizations:
         Name: Org1MSP
         ID: Org1MSP
         MSPDir: crypto-artifacts/peerOrganizations/org1.nmplus.com/msp
-#        AnchorPeers:
-#            - Host: peer0.org1.nmplus.com
-#              Port: 7051
+        AnchorPeers:
+            - Host: peer0.org1.nmplus.com
+            - Port: 7051
     - &Org2
         Name: Org2MSP
         ID: Org2MSP
         MSPDir: crypto-artifacts/peerOrganizations/org2.nmplus.com/msp
-#        AnchorPeers:
-#            - Host: peer0.org2.nmplus.com
-#              Port: 7052
+        AnchorPeers:
+            - Host: peer0.org2.nmplus.com
+            - Port: 7051
 
 Application: &ApplicationDefaults
     Organizations:

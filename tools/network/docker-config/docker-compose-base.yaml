@@ -73,8 +73,10 @@ services:
     volumes:
         - ../channel-artifacts:/etc/hyperledger/configtx
         - ../crypto-artifacts/ordererOrganizations/nmplus.com/orderers/orderer.nmplus.com:/etc/hyperledger/msp/orderer
-        - ../crypto-artifacts/peerOrganizations/org1.nmplus.com/peers/peer0.org1.nmplus.com/:/etc/hyperledger/msp/peerOrg1
-        - ../crypto-artifacts/peerOrganizations/org2.nmplus.com/peers/peer0.org2.nmplus.com/:/etc/hyperledger/msp/peerOrg2
+        - ../crypto-artifacts/peerOrganizations/org1.nmplus.com/peers/peer0.org1.nmplus.com/:/etc/hyperledger/msp/peer0Org1
+        - ../crypto-artifacts/peerOrganizations/org1.nmplus.com/peers/peer1.org1.nmplus.com/:/etc/hyperledger/msp/peer1Org1
+        - ../crypto-artifacts/peerOrganizations/org2.nmplus.com/peers/peer0.org2.nmplus.com/:/etc/hyperledger/msp/peer0Org2
+        - ../crypto-artifacts/peerOrganizations/org2.nmplus.com/peers/peer1.org2.nmplus.com/:/etc/hyperledger/msp/peer1Org2
     networks: 
     - nmpnetwork
 

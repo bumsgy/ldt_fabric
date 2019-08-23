@@ -28,17 +28,18 @@ class BalanceService {
     const args = [];
     const peers = [];
 
-    args.push(req.body.name);
-    args.push(req.body.balance.toString());
+    args.push('a');
+    args.push('b');
+    args.push('10');
 
     peers.push('peer0.org1.example.com');
-    peers.push('peer1.org1.example.com');
+    // peers.push('peer1.org1.example.com');
     peers.push('peer0.org2.example.com');
-    peers.push('peer1.org2.example.com');
+    // peers.push('peer1.org2.example.com');
 
     l.debug(`invoke peers:${peers}`);
-    return Promise.resolve(transaction.invokeChainCode(null, 'mychannel', 'mycc',
-      'add', args, 'admin', 'org1'));
+    return Promise.resolve(transaction.invokeChainCode(peers, 'mychannel', 'mycc',
+      'invoke', args, 'admin', 'org1'));
   }
 
   saveUser(req, res) {
@@ -56,10 +57,10 @@ class BalanceService {
     args.push(req.query.Age);
     args.push(req.query.Sex);
 
-    peers.push('peer0.org1.example.com');
-    peers.push('peer1.org1.example.com');
-    peers.push('peer0.org2.example.com');
-    peers.push('peer1.org2.example.com');
+    // peers.push('peer0.org1.example.com');
+    // peers.push('peer1.org1.example.com');
+    // peers.push('peer0.org2.example.com');
+    // peers.push('peer1.org2.example.com');
 
     l.debug(`invoke peers:${peers}`);
     return Promise.resolve(transaction.invokeChainCode(null, req.query.Channel, 'balance',
