@@ -36,7 +36,8 @@ Orderer: &OrdererDefaults
     MaxChannels: 0
     Kafka:
         Brokers:
-            - kafka0:9092
+            # - kafka0:9092
+            - 127.0.0.1:9092
             # - kafka1:9092
             # - kafka2:9092
 
