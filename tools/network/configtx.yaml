@@ -44,7 +44,7 @@ Orderer: &OrdererDefaults
     Organizations:
 
 Profiles:
-    OneOrgOrdererGenesis: 
+    TwoOrgOrdererGenesis: 
         Orderer: 
             <<: *OrdererDefaults
             Organizations:
@@ -54,7 +54,7 @@ Profiles:
                 Organizations: 
                     - *Org1
                     - *Org2
-    OneOrgChannel:
+    TwoOrgChannel:
         Consortium: SampleConsortium
         Application: 
             <<: *ApplicationDefaults
